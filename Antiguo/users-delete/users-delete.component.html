@@ -1,0 +1,7 @@
+  <div *ngIf="!NameIsValid" class="alert alert-danger">
+      <strong>Danger!</strong>{{message}}
+    </div>
+    <form #empleadoForm="ngForm">
+      <input type="text" placeholder="Nombre" [(ngModel)]="user.id" name="name">
+      <button mat-raised-button color="primary" type="submit"	(click)="remove()">Borrar</button>
+    </form>

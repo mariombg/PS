@@ -1,0 +1,10 @@
+  <div *ngIf="!isValid" class="alert alert-danger">
+    <strong>Danger!</strong>{{message}}
+  </div>
+    <form #empleadoForm="ngForm">
+      <input type="hidden" name="id" *ngIf="user" [(ngModel)]="user.id">
+      <input type="text" matInput placeholder="Nombre" [(ngModel)]="user.name" required name="name" #name>
+      <input type="text" placeholder="Email" [(ngModel)]="user.email" required name="email" #email>
+      <button mat-raised-button color="primary" type="submit"	(click)="save()">Guardar</button>
+      <button mat-raised-button color="primary" type="submit"	(click)="edit(empleadoForm.value)">Editar</button>
+    </form>

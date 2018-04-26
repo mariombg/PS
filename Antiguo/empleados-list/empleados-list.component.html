@@ -1,0 +1,6 @@
+
+<mat-list-item *ngFor="let u of users">
+  <a mat-button [routerLink]="['/users-add', u.id]">
+  {{u.id}}  {{u.name}}  {{u.email}}
+  </a>
+</mat-list-item>
